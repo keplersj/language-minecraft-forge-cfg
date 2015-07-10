@@ -1,6 +1,6 @@
 {
   "name": "language-minecraft-forge-cfg",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Minecraft Forge Configuraion File Grammar for Atom",
   "engines": {
     "atom": "*",
