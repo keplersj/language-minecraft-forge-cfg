@@ -3,10 +3,53 @@ scopeName: 'source.forge-config'
 fileTypes: ['cfg']
 patterns: [
   {
-    name: 'comment.line.number-sign.forge-config'
-    match: '(#)(.+)'
+    name: 'meta.category.forge-config'
+    match: '(.+)\\s*(\\{)'
     captures:
       1:
-        name: 'punctuation.definition.comment.forge-config'
+        name: 'variable.categort.assignment.forge-config'
+      2:
+        name: 'punctuation.brace.curly.forge-config'
+  }
+  {
+    name: 'meta.assignment.forge-config'
+    match: '(B|I|D|S)(:)(.+)\\s*(?:=|<)'
+    captures:
+      1:
+        name: 'constant.language.assignment.type.forge-config'
+      2:
+        name: 'punctuation.sepatator.assignment.type.forge-config'
+      3:
+        name: 'variable.assignment.forge-config'
+      4:
+        name: 'punctuation.operator.assignmentforge-config'
+  }
+  {
+    name: 'constant.numeric.forge-config'
+    match: '(?:-)?\\d+(?:.\\d+)?(?:E\\d+)?'
+  }
+  {
+    name: 'constant.language.forge-config'
+    match: '(true|false)'
+  }
+  {
+    name: 'comment.line.number-sign.forge-config'
+    match: '(#)(.+)'
+  }
+  {
+    name: 'punctuation.brace.curly.forge-config'
+    match: '\\{|\\}'
+  }
+  {
+    name: 'punctuation.assignment.forge-config'
+    match: '='
+  }
+  {
+    name: 'punctuation.sepatator.forge-config'
+    match: '\\:'
+  }
+  {
+    name: 'punctuation.definition.comment.forge-config'
+    match: '#'
   }
 ]
